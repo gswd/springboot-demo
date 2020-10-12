@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+person:
+  name: 张三
+  age: 12
+  likes:
+    - book
+    - movie
