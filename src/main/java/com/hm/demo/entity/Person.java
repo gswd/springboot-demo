@@ -14,6 +14,7 @@ import java.util.List;
 @ConfigurationProperties(prefix = "person")
 @Component
 public class Person {
+    private String lastName;
     private String name;
     private Integer age;
     private List<String> likes;
