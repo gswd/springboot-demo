@@ -2,10 +2,11 @@ package com.hm.demo.controller;
 
 import com.hm.demo.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+@Controller
 public class HelloController {
 
     @Autowired
@@ -14,9 +15,15 @@ public class HelloController {
     public String hello() {
         return "hello";
     }
+
+    @ResponseBody
     @GetMapping("/person")
     public Person person() {
         return person;
     }
 
+    @GetMapping("/t-hello")
+    public String jq() {
+        return "thymeleaf-hello";
+    }
 }
